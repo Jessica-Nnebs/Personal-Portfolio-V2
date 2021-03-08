@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+
+nav {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+}
+
+.container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex>div {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+.hero::before {
+    content: "";
+    background-image: url(./HELLO.svg);
+    position: absolute;
+    top: 0;
+    background-position: center;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.8;
+    max-width: 100%;
+}
+
+.hero {
+    margin-top: 205px;
+}
+
+.hero__text {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+    animation: heroAnim 1000ms ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+    .hero__text {
+        font-size: 2rem;
+        margin-top: 150px;
+    }
+}
+
+.scroll-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    -webkit-box-align: center;
+    margin-top: 10rem;
+}
+
+.magic-mouse {
+    position: relative;
+    width: 18px;
+    height: 30px;
+    border: 2px solid #000;
+    border-radius: 15px;
+}
+
+.scroll i {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    border-radius: 4px;
+    background-color: #000;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.scroll.vertical i {
+    width: 4px;
+    height: 9px;
+    margin-left: -2px;
+    animation: vertical-scroll 820ms ease-in-out infinite;
+}
+
+@keyframes vertical-scroll {
+    0% {
+        top: 6px;
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: 6px;
+    }
+}
+
+@keyframes heroAnim {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.project-listing {
+    display: flex;
+}
